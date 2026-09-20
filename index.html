@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monika Niezbecka | Content Creator & Social Media Portfolio</title>
+  <meta name="description" content="Oficjalne portfolio Moniki Niezbeckiej (@m_niezbecka) – Content Creator, TikTok & Reels Specialist. Tworzę dynamiczne virale, recenzje gastronomiczne i promocję turystyki województwa lubelskiego.">
+  <meta name="keywords" content="Monika Niezbecka, Content Creator, TikTok Lublin, Województwo Lubelskie, Social Media, Promocja gastronomii, Turystyka">
+  <meta property="og:title" content="Monika Niezbecka | Content Creator Portfolio">
+  <meta property="og:description" content="Dynamiczne portfolio pop-artowe twórczyni wideo. Zobacz virale z setkami tysięcy wyświetleń!">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2226%22>⚡</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Dynamic Interactive Pop-Art Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="site-wrapper">
+
+    <!-- ====================================================================
+         HEADER & NAVIGATION BAR
+         ==================================================================== -->
+    <header class="navbar" id="top-nav">
+      <div class="navbar-inner">
+        <a href="#hero" class="navbar-brand" id="brand-logo">
+          <span class="brand-name">Monika Niezbecka</span>
+          <span class="brand-badge">CONTENT CREATOR</span>
+        </a>
+
+        <ul class="navbar-nav" id="navbar-nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">O mnie</a></li>
+          <li><a href="#projects" class="nav-link">Projekty</a></li>
+          <li><a href="#sessions" class="nav-link">Sesje</a></li>
+          <li><a href="#contact" class="nav-link nav-cta">Kontakt ⚡</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <button class="btn-ctrl" id="btn-sound-toggle" title="Włącz dźwięki kliknięć" aria-label="Przełącz dźwięk">🔇</button>
+          <button class="btn-ctrl" id="btn-bg-toggle" title="Włącz/Wyłącz animowane tło" aria-label="Przełącz animację tła">🎨</button>
+          <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Menu mobilne">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- ====================================================================
+           1. HERO SECTION (LANDING PAGE)
+           ==================================================================== -->
+      <section class="hero-section" id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            
+            <!-- Left: Hero Headline & CTA -->
+            <div class="hero-content">
+              <div class="hero-pill-tag">
+                <span>⚡</span>
+                <span>SPECJALISTA DS. CONTENTU WIZUALNEGO</span>
+              </div>
+
+              <h1 class="hero-title">
+                TWORZĘ VIRALOWE TREŚCI, KTÓRE <span class="highlight-yellow">PRZYCIĄGAJĄ</span> <span class="highlight-pink">WZROK</span>
+              </h1>
+
+              <p class="hero-desc">
+                Hej. Z wykształcenia jestem muzykiem, zawodowo zajmuję się marketingiem, a prywatnie rozwijam swoją markę osobistą w Internecie. Inspirują mnie ludzie oraz ich historie. Moją supermocą jest kreatywne podejście do biznesu i sprzedaży. Udowadniam, że reklama nie musi być nudna.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#projects" class="btn-pop btn-pop-yellow" id="hero-btn-projects">
+                  <span>🎬 PRZYKŁADOWE REALIZACJE</span>
+                </a>
+                <a href="#contact" class="btn-pop btn-pop-pink" id="hero-btn-contact">
+                  <span>⚡ WSPÓŁPRACA</span>
+                </a>
+              </div>
+
+              <div class="hero-metrics-strip">
+                <div class="mini-stat">
+                  <span class="mini-stat-num" data-counter-target="452400" data-counter-prefix="+">+452 400</span>
+                  <span class="mini-stat-label">POLUBIEŃ</span>
+                </div>
+                <div class="mini-stat">
+                  <span class="mini-stat-num" data-counter-target="3560" data-counter-prefix="+">+3 560</span>
+                  <span class="mini-stat-label">OBSERWUJĄCYCH</span>
+                </div>
+                <div class="mini-stat">
+                  <span class="mini-stat-num" data-counter-target="1000000" data-counter-prefix="+">+1 000 000</span>
+                  <span class="mini-stat-label">ZASIĘG ORGANICZNY</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Hero Visual Retro Window & Stickers -->
+            <div class="hero-visual">
+              <div class="sticker sticker-smile">😎</div>
+              <div class="sticker sticker-region">📍 WOJ. LUBELSKIE</div>
+              <div class="sticker sticker-creator">✨ @M_NIEZBECKA</div>
+
+              <div class="retro-window">
+                <div class="window-header">
+                  <div class="window-dots">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                  </div>
+                  <span>★</span>
+                </div>
+                <div class="window-body">
+                  <div class="hero-img-wrap">
+                    <img src="assets/images/monika-hero-cropped.webp" alt="Monika Niezbecka Content Creator" class="hero-img" loading="eager">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Dynamic Marquee Ribbon #1 -->
+      <div class="marquee-ribbon" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-item">★ TIKTOK SPECIALIST <span class="marquee-star">✦</span> VIRAL MAKER <span class="marquee-star">✦</span> 219 200+ WYŚWIETLEŃ <span class="marquee-star">✦</span> WOJEWÓDZTWO LUBELSKIE <span class="marquee-star">✦</span> GASTRONOMIA I TURYSTYKA <span class="marquee-star">✦</span> DZIENNIKARSKIE OKO <span class="marquee-star">✦</span> MEDIA SPOŁECZNOŚCIOWE</div>
+          <div class="marquee-item">★ TIKTOK SPECIALIST <span class="marquee-star">✦</span> VIRAL MAKER <span class="marquee-star">✦</span> 219 200+ WYŚWIETLEŃ <span class="marquee-star">✦</span> WOJEWÓDZTWO LUBELSKIE <span class="marquee-star">✦</span> GASTRONOMIA I TURYSTYKA <span class="marquee-star">✦</span> DZIENNIKARSKIE OKO <span class="marquee-star">✦</span> MEDIA SPOŁECZNOŚCIOWE</div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           2. O MNIE (ABOUT SECTION)
+           ==================================================================== -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">✨ KIM JESTEM</div>
+            <h2 class="section-title">WYKSZTAŁCENIE</h2>
+          </div>
+
+          <div class="about-grid">
+            
+            <!-- Left: Story & Photo -->
+            <div class="about-story-box">
+              <span class="story-badge">Hej, jestem Monika 👋</span>
+              
+              <div class="about-photo-window">
+                <div class="about-window-bar">
+                  <div class="window-dot dot-red"></div>
+                  <div class="window-dot dot-yellow"></div>
+                  <div class="window-dot dot-green"></div>
+                </div>
+                <div class="about-photo-view">
+                  <img src="assets/images/monika-about.webp" alt="Monika Niezbecka" class="about-umcs-img">
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Education Cards (Inspirowane Screenem 2 w kolorystyce Pop-Art) -->
+            <div class="about-education-col">
+              
+              <!-- Education Card 1: Magister 2024-2026 -->
+              <div class="pop-edu-card">
+                <div class="edu-card-top-bar">
+                  <div class="edu-uni-badge uni-badge-pink">
+                    <span>UNIWERSYTET MARII CURIE-<br>SKŁODOWSKIEJ W LUBLINIE</span>
+                  </div>
+                  <div class="edu-years-badge">
+                    <span>2024–2026</span>
+                  </div>
+                </div>
+
+                <div class="edu-card-content">
+                  <span class="edu-degree-title">Magister</span>
+                  <h4 class="edu-major-name">Produkcja medialna</h4>
+                  <p class="edu-faculty-name">Wydział Politologii i Dziennikarstwa UMCS</p>
+                </div>
+              </div>
+
+              <!-- Education Card 2: Licencjat 2020-2023 -->
+              <div class="pop-edu-card">
+                <div class="edu-card-top-bar">
+                  <div class="edu-uni-badge uni-badge-pink">
+                    <span>UNIWERSYTET MARII CURIE-<br>SKŁODOWSKIEJ W LUBLINIE</span>
+                  </div>
+                  <div class="edu-years-badge">
+                    <span>2020–2023</span>
+                  </div>
+                </div>
+
+                <div class="edu-card-content">
+                  <span class="edu-degree-title">Licencjat</span>
+                  <h4 class="edu-major-name">Kreatywność Społeczna</h4>
+                  <p class="edu-faculty-name">Wydział Filozofii i Socjologii UMCS</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           3. PROJEKTY (PROJECTS & VIDEO SHOWCASE)
+           ==================================================================== -->
+      <section class="projects-section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">🎬 WIDEO I ROLKI</div>
+            <h2 class="section-title">WYRÓŻNIONE PROJEKTY</h2>
+          </div>
+
+          <!-- Video Grid -->
+          <div class="projects-grid">
+            
+            <!-- Video 1: Edukacyjna rolka wideo Flory Horse -->
+            <div class="project-card" data-category="turystyka kultura" data-video-src="assets/videos/projekt1.mp4">
+              <div class="project-card-header">
+                <span class="project-tag">Współpraca</span>
+              </div>
+              <div class="project-media-wrap">
+                <video class="project-video" poster="assets/posters/projekt1.webp" preload="metadata" muted playsinline loop>
+                  <source src="assets/videos/projekt1.mp4" type="video/mp4">
+                </video>
+                <div class="project-overlay">
+                  <div class="play-button-pop">▶</div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">Edukacyjna rolka wideo Flory Horse</h3>
+              </div>
+            </div>
+
+            <!-- Video 2: Zabawna rolka produktowa -->
+            <div class="project-card" data-category="turystyka" data-video-src="assets/videos/projekt2.mp4">
+              <div class="project-card-header">
+                <span class="project-tag">Współpraca</span>
+              </div>
+              <div class="project-media-wrap">
+                <video class="project-video" poster="assets/posters/projekt2.webp" preload="metadata" muted playsinline loop>
+                  <source src="assets/videos/projekt2.mp4" type="video/mp4">
+                </video>
+                <div class="project-overlay">
+                  <div class="play-button-pop">▶</div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">Zabawna rolka produktowa</h3>
+              </div>
+            </div>
+
+            <!-- Video 3: Rolka podsumowująca wydarzenie naukowe -->
+            <div class="project-card" data-category="gastronomia" data-video-src="assets/videos/projekt3.mp4">
+              <div class="project-card-header">
+                <span class="project-tag" style="background: var(--pop-yellow);">Promocja Uniwersytetu</span>
+              </div>
+              <div class="project-media-wrap">
+                <video class="project-video" poster="assets/posters/projekt3.webp" preload="metadata" muted playsinline loop>
+                  <source src="assets/videos/projekt3.mp4" type="video/mp4">
+                </video>
+                <div class="project-overlay">
+                  <div class="play-button-pop">▶</div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">Rolka podsumowująca wydarzenie naukowe</h3>
+              </div>
+            </div>
+
+            <!-- Video 4: Rolka zapraszająca na wydarzenie -->
+            <div class="project-card" data-category="kultura turystyka" data-video-src="assets/videos/projekt4.mp4">
+              <div class="project-card-header">
+                <span class="project-tag" style="background: var(--pop-purple-light);">promocja kultury</span>
+              </div>
+              <div class="project-media-wrap">
+                <video class="project-video" poster="assets/posters/projekt4.webp" preload="metadata" muted playsinline loop>
+                  <source src="assets/videos/projekt4.mp4" type="video/mp4">
+                </video>
+                <div class="project-overlay">
+                  <div class="play-button-pop">▶</div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">Rolka zapraszająca na wydarzenie</h3>
+              </div>
+            </div>
+
+            <!-- Video 5: Viralowa rolka POV: Piękno kobiet -->
+            <div class="project-card" data-category="lifestyle" data-video-src="assets/videos/projekt5.mp4">
+              <div class="project-card-header">
+                <span class="project-tag" style="background: var(--pop-pink); color: #fff;">lifestyle</span>
+              </div>
+              <div class="project-media-wrap">
+                <video class="project-video" poster="assets/posters/projekt5.webp" preload="metadata" muted playsinline loop>
+                  <source src="assets/videos/projekt5.mp4" type="video/mp4">
+                </video>
+                <div class="project-overlay">
+                  <div class="play-button-pop">▶</div>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">Viralowa rolka POV: Piękno kobiet</h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           4. SESJE (PHOTO SESSIONS & GALLERY)
+           ==================================================================== -->
+      <section class="sessions-section" id="sessions">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">📸 Fotografia & Backstage</div>
+            <h2 class="section-title">SESJE & KULISY TWORZENIA</h2>
+          </div>
+
+          <div class="polaroid-grid">
+            
+            <!-- Gallery 1: Sesja Lublin -->
+            <div class="polaroid-card gallery-card" style="transform: rotate(-2deg);" 
+                 data-gallery-title="Sesja Lublin"
+                 data-gallery-images='["assets/images/sesje/lublin/lublin-5.webp", "assets/images/sesje/lublin/lublin-1.webp", "assets/images/sesje/lublin/lublin-2.webp", "assets/images/sesje/lublin/lublin-4.webp"]'>
+              <div class="polaroid-pin"></div>
+              <div class="polaroid-stack-layer"></div>
+              <div class="polaroid-img-wrap">
+                <img src="assets/images/sesje/lublin/lublin-5.webp" alt="Sesja Lublin" class="polaroid-img" loading="lazy">
+                <span class="gallery-count-pill">📸 4 ZDJĘCIA</span>
+              </div>
+              <h4 class="polaroid-caption">Sesja Lublin</h4>
+              <span class="polaroid-badge">Otwórz galerię ↗</span>
+            </div>
+
+            <!-- Gallery 2: Sesja Lawendowe pole -->
+            <div class="polaroid-card gallery-card" style="transform: rotate(2deg);" 
+                 data-gallery-title="Sesja Lawendowe pole"
+                 data-gallery-images='["assets/images/sesje/lawenda/lawenda-1.webp", "assets/images/sesje/lawenda/lawenda-2.webp", "assets/images/sesje/lawenda/lawenda-3.webp"]'>
+              <div class="polaroid-pin" style="background: var(--pop-yellow);"></div>
+              <div class="polaroid-stack-layer"></div>
+              <div class="polaroid-img-wrap">
+                <img src="assets/images/sesje/lawenda/lawenda-1.webp" alt="Sesja Lawendowe pole" class="polaroid-img" loading="lazy">
+                <span class="gallery-count-pill">📸 3 ZDJĘCIA</span>
+              </div>
+              <h4 class="polaroid-caption">Sesja Lawendowe pole</h4>
+              <span class="polaroid-badge">Otwórz galerię ↗</span>
+            </div>
+
+            <!-- Gallery 3: Kadry z planu -->
+            <div class="polaroid-card gallery-card" style="transform: rotate(-1.5deg);" 
+                 data-gallery-title="Kadry z planu"
+                 data-gallery-images='["assets/images/sesje/kadry/kadry-4.webp", "assets/images/sesje/kadry/kadry-1.webp", "assets/images/sesje/kadry/kadry-2.webp", "assets/images/sesje/kadry/kadry-3.webp", "assets/images/sesje/kadry/kadry-5.webp"]'>
+              <div class="polaroid-pin" style="background: var(--pop-cyan);"></div>
+              <div class="polaroid-stack-layer"></div>
+              <div class="polaroid-img-wrap">
+                <img src="assets/images/sesje/kadry/kadry-4.webp" alt="Kadry z planu" class="polaroid-img" loading="lazy">
+                <span class="gallery-count-pill">📸 5 ZDJĘĆ</span>
+              </div>
+              <h4 class="polaroid-caption">Kadry z planu</h4>
+              <span class="polaroid-badge">Otwórz galerię ↗</span>
+            </div>
+
+            <!-- Placeholder Polaroid: Kolejne projekty w przygotowaniu (bez zmian) -->
+            <div class="polaroid-card coming-soon" style="transform: rotate(1.5deg);">
+              <div class="coming-icon">⚡</div>
+              <h4 class="polaroid-caption" style="font-size: 1.3rem;">Nowe Realizacje Wkrótce</h4>
+              <p style="font-size: 0.95rem; color: #5a5d74; margin-top: 0.5rem; max-width: 220px;">
+                Kolejne kampanie, recenzje gastronomiczne i sesje w trakcie montażu!
+              </p>
+              <a href="#contact" class="btn-pop btn-pop-yellow" style="margin-top: 1.25rem; font-size: 0.9rem; padding: 0.4rem 1rem;">BĄDŹ PIERWSZY ↗</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           5. KONTAKT (CONTACT SECTION)
+           ==================================================================== -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">📬 Napisz do mnie</div>
+            <h2 class="section-title">KONTAKT & WSPÓŁPRACA</h2>
+            <p class="section-subtitle">Chcesz zrealizować angażującą kampanię, wypromować swój lokal lub atrakcję turystyczną? Porozmawiajmy o szczegółach!</p>
+          </div>
+
+          <div class="contact-grid">
+            
+            <!-- Left: Channels & Direct Info -->
+            <div class="contact-info-col">
+              <div class="contact-hero-card">
+                <h3 class="contact-hero-title">Zróbmy razem coś ładnego</h3>
+                <p class="contact-hero-p">
+                  Gwarantuję pełne zaangażowanie, profesjonalny montaż, dynamiczną realizację wideo oraz dotarcie do zaangażowanej społeczności.
+                </p>
+
+                <div class="channels-list">
+                  <a href="https://www.tiktok.com/@m_niezbecka" target="_blank" rel="noopener noreferrer" class="channel-card">
+                    <div class="channel-icon tiktok">
+                      <img src="assets/icons/tiktok.webp" alt="TikTok" class="channel-icon-img">
+                    </div>
+                    <div class="channel-detail">
+                      <h4>TikTok Profil</h4>
+                      <p>@m_niezbecka</p>
+                    </div>
+                  </a>
+
+                  <a href="https://www.instagram.com/m_niezbecka" target="_blank" rel="noopener noreferrer" class="channel-card">
+                    <div class="channel-icon insta">
+                      <img src="assets/icons/instagram.webp" alt="Instagram" class="channel-icon-img">
+                    </div>
+                    <div class="channel-detail">
+                      <h4>Instagram</h4>
+                      <p>@m_niezbecka</p>
+                    </div>
+                  </a>
+
+                  <a href="mailto:monika.niezbecka11@gmail.com" class="channel-card">
+                    <div class="channel-icon mail">
+                      <img src="assets/icons/email.webp" alt="Adres E-mail" class="channel-icon-img">
+                    </div>
+                    <div class="channel-detail">
+                      <h4>Adres E-mail</h4>
+                      <p>monika.niezbecka11@gmail.com</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Extra sticker note -->
+              <div style="background: var(--pop-white); border: var(--border-thick); box-shadow: var(--shadow-base); border-radius: var(--radius-md); padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                <span style="font-size: 2.2rem;">🚀</span>
+                <div>
+                  <h4 style="font-family: var(--font-condensed); font-size: 1.1rem; text-transform: uppercase;">Szybki czas realizacji</h4>
+                  <p style="font-size: 0.9rem; color: #494d62;">Gotowe materiały wideo zoptymalizowane pod algorytmy dostarczam w ustalonym terminie.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Pop-Art Contact Window -->
+            <div class="contact-window">
+              <div class="window-header">
+                <div class="window-dots">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+              </div>
+
+              <form class="contact-form" id="contact-form" action="https://formsubmit.co/monika.niezbecka11@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nowa wiadomość ze strony portfolio (Monika Niezbecka)">
+                <input type="hidden" name="_captcha" value="false">
+                <div class="form-group">
+                  <label class="form-label" for="form-name">Twoje Imię / Marka *</label>
+                  <input type="text" id="form-name" name="imie_nazwisko" class="form-input" placeholder="np. Karolina Nowak / Restauracja Stary Młyn" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="form-email">Adres E-mail *</label>
+                  <input type="email" id="form-email" name="email" class="form-input" placeholder="twoj-email@domena.pl" required>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="form-service">Rodzaj Współpracy</label>
+                  <select id="form-service" name="rodzaj_wspolpracy" class="form-select">
+                    <option value="tiktok">Wideo TikTok / Reels (Promocja)</option>
+                    <option value="gastronomia">Recenzja i promocja gastronomii / kawiarni</option>
+                    <option value="turystyka">Promocja regionu / hotelu / atrakcji turystycznej</option>
+                    <option value="fotografia">Sesja fotograficzna & relacja backstage</option>
+                    <option value="inne">Inny projekt komercyjny</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="form-message">Wiadomość / Pomysł na współpracę *</label>
+                  <textarea id="form-message" name="wiadomosc" class="form-textarea" placeholder="Napisz krótko o swoim projekcie, terminie lub oczekiwaniach..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-pop btn-pop-pink form-submit-btn">
+                  <span>WYŚLIJ WIADOMOŚĆ 🚀</span>
+                </button>
+
+                <div id="form-feedback" style="display: none; background: var(--pop-yellow); border: var(--border-med); box-shadow: var(--shadow-sm); border-radius: var(--radius-sm); padding: 1rem; text-align: center; font-weight: 700;">
+                  🎉 Dziękuję za wiadomość! Twoje zapytanie zostało wysłane do Moniki.
+                </div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====================================================================
+         FOOTER
+         ==================================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h3>MONIKA NIEZBECKA</h3>
+            <p>Content Creator • Social Media & TikTok Specialist • Lubelskie</p>
+          </div>
+
+          <a href="#hero" class="footer-back-to-top">DO GÓRY ↑</a>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Monika Niezbecka (@m_niezbecka). Wszelkie prawa zastrzeżone.</p>
+          <p>Zaprojektowano w unikalnej estetyce Pop-Art & Neo-Brutalism ⚡</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ====================================================================
+       MODAL LIGHTBOX 1: VIDEO PLAYER
+       ==================================================================== -->
+  <div class="modal-backdrop" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-window">
+      <div class="modal-header">
+        <span class="modal-title" id="modal-title">WIDEO PROJEKTU</span>
+        <button class="btn-close-modal" id="btn-close-video-modal" aria-label="Zamknij podgląd wideo">✕</button>
+      </div>
+      <div class="modal-body">
+        <video id="modal-video-player" class="modal-video-player" controls playsinline></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL LIGHTBOX 2: IMAGE GALLERY VIEWER
+       ==================================================================== -->
+  <div class="modal-backdrop" id="image-modal" role="dialog" aria-modal="true" aria-labelledby="modal-image-title">
+    <div class="modal-window modal-window-gallery">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <span class="modal-title" id="modal-image-title">SESJA ZDJĘCIOWA</span>
+          <span class="gallery-counter-pill" id="modal-gallery-counter">1 / 5</span>
+        </div>
+        <button class="btn-close-modal" id="btn-close-image-modal" aria-label="Zamknij galerię">✕</button>
+      </div>
+      <div class="modal-gallery-body">
+        <button class="gallery-nav-btn gallery-prev" id="gallery-prev-btn" aria-label="Poprzednie zdjęcie">◀</button>
+        <div class="gallery-main-img-wrap">
+          <img id="modal-image-view" src="" alt="Zdjęcie z sesji" class="modal-gallery-img">
+        </div>
+        <button class="gallery-nav-btn gallery-next" id="gallery-next-btn" aria-label="Następne zdjęcie">▶</button>
+      </div>
+      <div class="gallery-thumbnails-bar" id="gallery-thumbnails-bar">
+        <!-- Thumbnails generated dynamically by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
